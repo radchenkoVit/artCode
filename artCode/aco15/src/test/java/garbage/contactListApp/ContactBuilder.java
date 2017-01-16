@@ -1,8 +1,10 @@
-package week1.contactListApp.model;
+package garbage.contactListApp;
+
+import garbage.contactListApp.model.Contact;
 
 import java.io.IOException;
 
-import static week1.contactListApp.InputString.reader;
+import static garbage.contactListApp.InputString.reader;
 
 public class ContactBuilder {
     private Contact contact = new Contact();

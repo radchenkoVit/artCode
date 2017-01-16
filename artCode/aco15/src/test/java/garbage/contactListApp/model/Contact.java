@@ -1,4 +1,4 @@
-package week1.contactListApp.model;
+package garbage.contactListApp.model;
 
 public class Contact {
     private String firstName;

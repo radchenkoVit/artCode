@@ -48,10 +48,10 @@
 Practical part
 
 	1. ContactList Application (3 hours)
-        - addContact
-        - removeLast
-        - findContact
-        - removeContact
+        - addContact +
+        - removeLast +
+        - findContact +
+        - removeContact +
 
         -*updateContactInfo
 

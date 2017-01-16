@@ -1,8 +1,5 @@
-package week1.contactListApp.enums;
+package garbage.contactListApp.enums;
 
-import week1.contactListApp.model.Contact;
-
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -11,9 +8,7 @@ public enum FindBy {
     private static Map<String, FindBy> nameMap = new HashMap<String, FindBy>();
     private static Map<Integer, FindBy> indexMap = new HashMap<Integer, FindBy>();
 
-
     static {
-        //init
         for (FindBy findBy: FindBy.values()){
             nameMap.put(findBy.name, findBy);
             indexMap.put(findBy.index, findBy);
@@ -33,17 +28,5 @@ public enum FindBy {
 
     public static FindBy getByIndex(int index){
         return indexMap.get(index);
-    }
-
-    // think how to return correct comparator
-    //public abstract Comparator<Contact> getCom();
-
-    //todo
-    public Comparator<Contact> getComparator(){
-        return new Comparator<Contact>() {
-            public int compare(Contact o1, Contact o2) {
-                return -1;
-            }
-        };
     }
 }
