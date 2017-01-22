@@ -53,7 +53,7 @@ public class ContactListControlImpl implements IContactListControl {
         Contact contact = finder.find(ContactField.getField(fieldIndex), value);
 
         if (contact != null) {
-            //TODO: as varian move to separate class
+            //TODO: as variant move to separate class
             return updateContact(contact, ContactField.getField(fieldIndex), value);
         }
 
@@ -61,27 +61,39 @@ public class ContactListControlImpl implements IContactListControl {
     }
 
     public void showAllContacts() {
-        listView.showAllContacts();
+        listView.showAllContacts(contactList);
     }
 
     public void showFirstFiveContacts() {
-        listView.showFirstFiveContacts();
+        listView.showFirstFiveContacts(contactList);
     }
 
     public void showLastFiveContacts() {
-        listView.showLastFiveContacts();
+        listView.showLastFiveContacts(contactList);
     }
 
     public void showContacts(MobileOperator operator) {
-        listView.showContacts(operator);
+        listView.showContacts(operator, contactList);
     }
 
     public void showLifeContacts() {
-        listView.showContacts(MobileOperator.Life);
+        listView.showContacts(MobileOperator.Life, contactList);
     }
 
     public void showKievStarContacts() {
-        listView.showContacts(MobileOperator.KyivStar);
+        listView.showContacts(MobileOperator.KyivStar, contactList);
+    }
+
+    public Contact createContact() {
+        return null;
+    }
+
+    public int getContactToFind() {
+        return 0;
+    }
+
+    public int getContactToRemove() {
+        return 0;
     }
 
     private boolean updateContact(Contact contact, ContactField field, String value){
@@ -95,6 +107,8 @@ public class ContactListControlImpl implements IContactListControl {
 
         return false;
     }
+
+
 
     private boolean containsOnlyCharacter(String validateString){
         String regex =  "^[ A-z]+$";//copyPast from inet

@@ -17,6 +17,8 @@ public interface IContactListControl {
 
     boolean updateContactInfo(int fieldIndex, String value);
 
+
+    //methods by view to display data
     void showAllContacts();
 
     void showFirstFiveContacts();
@@ -29,4 +31,11 @@ public interface IContactListControl {
     void showLifeContacts();
 
     void showKievStarContacts();
+
+    //methods by view to get data
+    Contact createContact();
+
+    int getContactToFind();
+
+    int getContactToRemove();
 }

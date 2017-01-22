@@ -12,9 +12,11 @@ public class RunApp {
 
     public static void main(String[] args){
         List<Contact> contactList = getFromDB();
-        IContactListView listView = new ContactListViewImpl(contactList);
+        IContactListView listView = new ContactListViewImpl();
 
         ContactListControlImpl contactListControl = new ContactListControlImpl(contactList, listView);
+
+
 
         //TODO: how to correct organize data which user should enter
     }
